@@ -1,0 +1,210 @@
+﻿@model Root
+<div>
+    <style>
+        body {
+           
+            background: darkBlue;
+            color: gold;
+        }
+    </style>
+    <h1>League of Legends Get Random Champion</h1>
+    <p>This page show everything about the champion including a image of the champion it generates. </p>
+
+
+    <h2>Champion Name: @Model.champName</h2>
+    <h2>Cost of Champion: @Model.blueEssence</h2>
+    <h2>RP: @Model.RP</h2>
+    <h2>HP Gained Per Level Up: @Model.hpGainPerLvL</h2>
+    <h2>Champion's HP: @Model.HP</h2>
+    <h2>Hp Regen: @Model.HPR</h2>
+    <h2>HP Regen Per Level Up: @Model.hpRegenGainPerLvL</h2>
+    <h2>Resource Used By Champion: @Model.resource</h2>
+    <h2>MP: @Model.mp</h2>
+    <h2>MP Gain Per Level Up: @Model.mpGainPerLvL</h2>
+    <h2>MP Regen: @Model.mpRegen</h2>
+    <h2>Champion's Attack Damage: @Model.attDamage</h2>
+    <h2>Attack Damage Gained per Level Up: @Model.attDamageGainPerLvL</h2>
+    <h2>Champion's Movement Speed: @Model.moveSpeed</h2>
+    <h2>Champion's Attack Speed: @Model.attSpeed</h2>
+    <h2>Attack Speed Gain per Level Up: @Model.attSpeedGainPerLvL</h2>
+    <h2>Champion's Armor: @Model.armor</h2>
+    <h2>Champion's Range: @Model.range</h2>
+    <h2>Armor Gained per Level Up: @Model.armorGainPerLvL</h2>
+    <h2>Champion's Magic Armor: @Model.magicArmor</h2>
+    <h2>Magic Armor Gained per Level: @Model.magicArmorGainPerLvL</h2>
+    <h2>Champion's Release Data: @Model.releaseDate</h2>
+    <h2>Champion's Attributes: @Model.Attributes</h2>
+
+    @{
+        var imageSrc = Model.champName.ToLower() switch
+        {
+            "aatrox" => "Aatrox.jpeg",
+            "ahri" => "Ahri.jpeg",
+            "akali" => "Akali.jpeg",
+            "akshan" => "Akshan.webp",
+            "alistar" => "Alistar.jpeg",
+            "amumu" => "Amumu.jpeg",
+            "anivia" => "Anivia.jpeg",
+            "annie" => "Annie.jpeg",
+            "aphelios" => "Aphelios.jpeg",
+            "ashe" => "Ashe.jpeg",
+            "aurelionsol" => "Aurelionsol.jpeg",
+            "azir" => "Azir.jpeg",
+            "bard" => "Bard.jpeg",
+            "belveth" => "Belveth.jpeg",
+            "blitzcrank" => "Blitzcrank.jpeg",
+            "brand" => "Brand.jpeg",
+            "braum" => "Braum.jpeg",
+            "caitlyn" => "Caitlyn.jpeg",
+            "camille" => "Camille.jpeg",
+            "cassiopeia" => "Cassiopeia.jpeg",
+            "chogath" => "Chogath.jpeg",
+            "corki" => "Corki.jpeg",
+            "darius" => "Darius.jpeg",
+            "diana" => "Diana.jpeg",
+            "draven" => "Draven.jpeg",
+            "drmundo" => "DrMundo.jpeg",
+            "ekko" => "Ekko.jpeg",
+            "elise" => "Elise.jpeg",
+            "evelynn" => "Evelynn.jpeg",
+            "ezreal" => "Ezreal.jpeg",
+            "fiddlesticks" => "Fiddlesticks.jpeg",
+            "fiora" => "Fiora.jpeg",
+            "fizz" => "Fizz.jpeg",
+            "galio" => "Galio.jpeg",
+            "gangplank" => "Gangplank.jpeg",
+            "garen" => "Garen.jpeg",
+            "gnar" => "Gnar.jpeg",
+            "gragas" => "Gargas.jpeg",
+            "graves" => "Graves.jpeg",
+            "gwen" => "Gwen.jpeg",
+            "hecarim" => "Hecraim.jpeg",
+            "heimerdinger" => "Heimerdinger.jpeg",
+            "illaoi" => "Illaoi_.jpeg",
+            "irelia" => "Irelia.jpeg",
+            "ivern" => "Ivern.jpeg",
+            "janna" => "Janna.jpeg",
+            "jarvaniv" => "JarvainIV.jpeg",
+            "jax" => "Jax.jpeg",
+            "jayce" => "Jayce.jpeg",
+            "jhin" => "Jhin.jpeg",
+            "jinx" => "Jinx.jpeg",
+            "k'sante" => "K'Sante.jpeg",
+            "kaisa" => "Kaisa.jpeg",
+            "kalista" => "Kalista.jpeg",
+            "karma" => "Karma.jpeg",
+            "karthus" => "Karthus.jpeg",
+            "kassadin" => "Kassadin.jpeg",
+            "katarina" => "Katarina.jpeg",
+            "kayle" => "Kayle.jpeg",
+            "kayn" => "Kayn.jpeg",
+            "kennen" => "Kenne.jpeg",
+            "khazix" => "Khazix.jpeg",
+            "kindred" => "Kindred.jpeg",
+            "kled" => "Kled.jpeg",
+            "kogmaw" => "KogMaw.jpeg",
+            "leblanc" => "Leblanc.jpeg",
+            "leesin" => "LeeSin.jpeg",
+            "leona" => "Leona.jpeg",
+            "lillia" => "Lillia.jpeg",
+            "lissandra" => "Lissandra.jpeg",
+            "lucian" => "Lucian.jpeg",
+            "lulu" => "Lulu.jpeg",
+            "lux" => "Lux.jpeg",
+            "malphite" => "Malphite.jpeg",
+            "malzahar" => "Malzahar.jpeg",
+            "maokai" => "Maokai.jpeg",
+            "masteryi" => "MasterYi.jpeg",
+            "milio" => "milio.jpeg",
+            "missfortune" => "MissFortune.jpeg",
+            "monkeyking" => "MonkeyKing.jpeg",
+            "mordekaiser" => "Morderkaiser.jpeg",
+            "morgana" => "Morgana.jpeg",
+            "nami" => "Nami.jpeg",
+            "nasus" => "Nasus.jpeg",
+            "nautilus" => "Nautilus.jpeg",
+            "neeko" => "Neeko.jpeg",
+            "nidalee" => "Nidalee.jpeg",
+            "nilah" => "Nilah.jpeg",
+            "nocturne" => "Nocturne.jpeg",
+            "nunu" => "Nunu.jpeg",
+            "olaf" => "Olaf.jpeg",
+            "orianna" => "Orianna.jpeg",
+            "ornn" => "Ornn.jpeg",
+            "pantheon" => "Pantheo.jpeg",
+            "poppy" => "Poppy.jpeg",
+            "pyke" => "Pyke.jpeg",
+            "qiyana" => "Qiyana.jpeg",
+            "quinn" => "Quinn.jpeg",
+            "rakan" => "rakan.jpeg",
+            "rammus" => "Rammus.jpeg",
+            "reksai" => "RekSai.jpeg",
+            "rell" => "Rell.jpeg",
+            "renata" => "Renata.jpeg",
+            "renekton" => "Renekton.jpeg",
+            "rengar" => "Rengar.jpeg",
+            "riven" => "Riven.jpeg",
+            "rumble" => "Rumble.jpeg",
+            "ryze" => "Ryze.jpeg",
+            "samira" => "Samira.jpeg",
+            "sejuani" => "Sejuani.jpeg",
+            "senna" => "Senna.jpeg",
+            "seraphine" => "Seraphine.jpeg",
+            "sett" => "Sett.jpeg",
+            "shaco" => "Shaco.jpeg",
+            "shen" => "Shen.jpeg",
+            "shyvana" => "Shyvana.jpeg",
+            "singed" => "Singed.jpeg",
+            "sion" => "sion.jpeg",
+            "sivir" => "Sivir.jpeg",
+            "skarner" => "Skarner.jpeg",
+            "sona" => "Sona_.jpeg",
+            "soraka" => "Soraka.jpeg",
+            "swain" => "Swain.jpeg",
+            "sylas" => "Sylas.jpeg",
+            "syndra" => "Syndra.jpeg",
+            "tahmkench" => "TahmKench.jpeg",
+            "taliyah" => "Taliyah.jpeg",
+            "talon" => "Talon.jpeg",
+            "taric" => "Taric.jpeg",
+            "teemo" => "Teemo.jpeg",
+            "thresh" => "Thresh.jpeg",
+            "tristana" => "Tristana.jpeg",
+            "trundle" => "Trundle.jpeg",
+            "tryndamere" => "Tryndamere.jpeg",
+            "twistedfate" => "TwistedFate.jpeg",
+            "twitch" => "Twitch.jpeg",
+            "udyr" => "Udyr.jpeg",
+            "urgot" => "Urgot.jpeg",
+            "varus" => "Varus.jpeg",
+            "vayne" => "Vayne.jpeg",
+            "veigar" => "Veigar.jpeg",
+            "velkoz" => "Velkoz.jpeg",
+            "vex" => "Vex.jpeg",
+            "vi" => "Vi.jpeg",
+            "viego" => "Viego.jpeg",
+            "viktor" => "Viktor.jpeg",
+            "vladimir" => "Vladimir.jpeg",
+            "volibear" => "Volibear.jpeg",
+            "warwick" => "Warwick.jpeg",
+            "xayah" => "Xayah.jpeg",
+            "xerath" => "Xerath.jpeg",
+            "xinzhao" => "XinZhao.jpeg",
+            "yasuno" => "Yasuno.jpeg",
+            "yone" => "Yone.jpeg",
+            "yuumi" => "Yuumi.jpeg",
+            "zac" => "Zac.jpeg",
+            "zed" => "Zed.jpeg",
+            "zeri" => "Zeri.jpeg",
+            "ziggs" => "Ziggs.jpeg",
+            "zilean" => "Zilean.jpeg",
+            "zoe" => "Zoe.jpeg",
+            "zyra" => "Zyra.jpeg",
+            _ => "league_of_legends_logo.png"
+        };
+    }
+
+    <img src="img/@imageSrc" class="img-fluid">
+
+</div>
+

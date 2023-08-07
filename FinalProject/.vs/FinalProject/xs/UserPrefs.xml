@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{AFAFF0B5-43E3-4E78-BE82-1FEEB04F3084}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LOL.cs">
+    <Files>
+      <File FileName="Controllers/LOL.cs" Line="32" Column="83" />
+      <File FileName="Views/_ViewStart.cshtml" />
+      <File FileName="Views/_ViewImports.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="FinalProject" expanded="True">
+            <Node name="FinalProject">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
